@@ -1,6 +1,8 @@
-- name: Bill Mills
-  affiliation: TRIUMF
-  github: BillMills
+- name: Ryan Clement
+  affiliation: Middlebury Libraries
+  github: rkclement
   interests:
-    - Programming
+    - Data Science
+    - Digital Liberal Arts
     - Open Science
+    - User Experience
