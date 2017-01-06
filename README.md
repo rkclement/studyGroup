@@ -1,22 +1,13 @@
-###[Leia isto em Português](https://github.com/mozillascience/studyGroup/blob/gh-pages/README-pt.md)
+# Middlebury Humanities Data in R Study Group
 
-#Mozilla Study Groups
+Welcome! This Study Group is based at Middlebury College, in Middlebury, VT. The facilitators of this group are Ryan Clement, Data Services Librarian, and Kristy Golubiewski-Davis, Digital Liberal Arts CLIR Post Doctoral Fellow. We're excited that you're interested in learning more about data, coding, and reproducible research with us! You can reach us at <rclement@middlebury.edu> or <kgolubiewskidavis@middlebury.edu>.
 
-Welcome to [Mozilla Science Lab](https://www.mozillascience.org/)'s Study Group project! From here, we'll set you up with everything you need to start your own study group.
+This Middlebury Study Group is an informal meetup of friends and colleagues to share skills, stories, and ideas on using code for research and exploring open research practices. The goal is to create a friendly, no-pressure environment where people can share their work, ask for help on a coding problem, and learn and work together with their peers.
 
-### Wait, What's a 'Mozilla Study Group'?
+Our first meetings will start in February 2017, time and location TBD. We will start our study by working through the book [*Humanities Data in R*](http://humanitiesdata.org/) together. This book is available as an ebook [here](http://link.springer.com/book/10.1007%2F978-3-319-20702-5) if you are affiliated with Middlebury.
 
-Mozilla Study Groups are fun, informal meetups of your friends and colleagues from around your local institution or town to share skills, stories and ideas on using code for research, and explore open research practices. The goal is to create a friendly, no-pressure environment where people can share their work, ask for help on a coding problem, and learn and work together with their peers. **Anyone can start a Study Group-- you don't have to be an expert coder to do so!**
+If you're interested in participating, please fill out our [brief survey](https://docs.google.com/a/middlebury.edu/forms/d/e/1FAIpQLSeYJ1PH1tRrVNviZbTFGkMvp7fA-ARL3mMgoqCM5fusPkVWlw/viewform) to let us know about your interest and your experience level.
 
-What do Study Groups look like in Real Life? Check out the [Boston University Study Group's website](http://study.bu.edu/), and the [University of Tornonto Coders website](https://uoftcoders.github.io/studyGroup/). You can also watch a few short [videos from Study Group Leads in our Orientation Guide](https://mozillascience.github.io/study-group-orientation/1-about-study-groups.html). 
-
-
-## For New Organizers
-* **Join our Gitter Chat:** There are Study Groups all around the world. We use an online [Gitter Chat](https://gitter.im/mozillascience/studyGroup) to connect and share resources and ideas (you can sign in with GitHub, or using a Twitter ID if you're not set up on GitHub just yet). If you'd like to say hello, please introduce yourself in the chat, tell us where you are, and what you're thinking about or planning for your new Study Group. We're looking forward to meeting you. 
-* **Check out the Study Group Orientation Guide:**  If you think you might want to start your own group, [The Study Group Orientation Guide](https://mozillascience.github.io/study-group-orientation/index.html) covers running Group meetings, the super easy setup of your Study Group website, collaborating online using GitHub, an introduction to open research practice, and more. Take a look at the [About section here](https://mozillascience.github.io/study-group-orientation/1-about-study-groups.html) and the section on the [Study Group Lead role](https://mozillascience.github.io/study-group-orientation/1.1-lead-role.html)-- these should help you figure out if you'd like to start a Group.  
-* **Come to an Online Orientation Meeting:** We’ll be running an online Orientation-- a series of 4 meetings, -- for new Group Leads starting next month (November 2016!) and also in January of 2017. It’s a great opportunity to meet, network, and share ideas with other Groups.  If you’re interested in joining us, [let us know by filling out this form.](https://docs.google.com/a/mozillafoundation.org/forms/d/e/1FAIpQLSdtKqAMQnKri-0xLx4hD_fpb000n9czsQd4oo9B2JUgtuIVlg/viewform?c=0&w=1)
-* **Read the code of conduct:** this Study Group Program is for everyone - we abide by a [set of rules](https://www.mozillascience.org/code-of-conduct/) that require everyone be treated with respect. Help us make a space where everyone feels welcome, and we'll all have a better time!
-* **Watch this repo:** up in the top right, there's a button that says 'Watch'; click it, and set yourself to 'Watching'. This will send you email notifications of new discussions; if you don't want email, but would like an alert just on GitHub, change the setting in Settings -> Notification Center (Settings is the little cog in the top right).
  
 ## How to Set Up Your Own Mozilla Study Group Website
 
