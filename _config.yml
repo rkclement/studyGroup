@@ -18,7 +18,7 @@ language: en
 # Optional Configuration
 # None of these things need to be changed - but feel free!
 
-titleBackground: "https://lh4.googleusercontent.com/wcUonmAi9xjLcQDi8-20PSovtgxz-G3Wt4pq7TJPqg2gaeaNnUqfttRDDLGUGRwMMFYlC74ZGdJv_ks=w1920-h1098"
+titleBackground: "https://s3.amazonaws.com/libapps/accounts/75445/images/wcUonmAi9xjLcQDi8-20PSovtgxz-G3Wt4pq7TJPqg2gaeaNnUqfttRDDLGUGRwMMFYlC74ZGdJv_ks=w1920-h1098.jpg"
 headlineSmall: "Welcome!"
 headlineMain: "Learning Together!"
 
