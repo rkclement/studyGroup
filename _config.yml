@@ -19,8 +19,8 @@ language: en
 # None of these things need to be changed - but feel free!
 
 titleBackground: "https://s3.amazonaws.com/libapps/accounts/75445/images/Middlebury_College_5686940_i0.jpg"
-headlineSmall: "Welcome!"
-headlineMain: 
+headlineSmall: "Learning. Together."
+headlineMain: "Welcome!"
 
 # Setup Google Calendar
 # Usage:
