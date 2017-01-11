@@ -3,7 +3,7 @@
 
 #Step 1: give your study group a name and a short description,
 #and choose a language from the options in the _data directory:
-title: Middlebury Humanities Data in R Study Group
+title: Middlebury Data Study Group
 description: "A group for the Middlebury community to learn, skill-share, and work collaboratively on coding and open research."
 language: en
 
@@ -18,7 +18,7 @@ language: en
 # Optional Configuration
 # None of these things need to be changed - but feel free!
 
-titleBackground: "https://s3.amazonaws.com/libapps/accounts/75445/images/wcUonmAi9xjLcQDi8-20PSovtgxz-G3Wt4pq7TJPqg2gaeaNnUqfttRDDLGUGRwMMFYlC74ZGdJv_ks=w1920-h1098.jpg"
+titleBackground: "https://s3.amazonaws.com/libapps/accounts/75445/images/Middlebury_College_5686940_i0.jpg"
 headlineSmall: "Welcome!"
 headlineMain: "Learning Together!"
 
