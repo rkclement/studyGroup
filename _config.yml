@@ -20,7 +20,7 @@ language: en
 
 titleBackground: "https://s3.amazonaws.com/libapps/accounts/75445/images/Middlebury_College_5686940_i0.jpg"
 headlineSmall: "Welcome!"
-headlineMain: "Learning Together!"
+headlineMain: 
 
 # Setup Google Calendar
 # Usage:
