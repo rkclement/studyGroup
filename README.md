@@ -1,3 +1,5 @@
+[Take me back to the study group website!](https://rkclement.github.io/studyGroup/)
+
 # Middlebury Humanities Data in R Study Group
 
 Welcome! This Study Group is based at Middlebury College, in Middlebury, VT. The facilitators of this group are Ryan Clement, Data Services Librarian, and Kristy Golubiewski-Davis, Digital Liberal Arts CLIR Post Doctoral Fellow. We're excited that you're interested in learning more about data, coding, and reproducible research with us! You can reach us at <rclement@middlebury.edu> or <kgolubiewskidavis@middlebury.edu>.
