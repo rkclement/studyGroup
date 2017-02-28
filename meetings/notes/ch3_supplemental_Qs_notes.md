@@ -13,3 +13,12 @@ The following questions have wrong answers or are poorly worded:
 ```r
 table(round(iris$Sepal.Length), iris$Species)
 ```
+
+**Q27 - I think the plot looks terrible using the parameters given in the book's answer. I would put** `par(mfrow = c(3,1))` **instead.**
+
+**Q32 - The answer gives the wrong direction for the inequality in the table function. The following code is correct:**
+
+```r
+petals <- quantile(iris$Petal.Length, probs = 0.7)
+table(iris$Species, petals < iris$Petal.Length)
+```
