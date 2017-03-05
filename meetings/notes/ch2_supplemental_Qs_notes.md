@@ -4,7 +4,7 @@ author: Ryan Clement, Kristy Golubiewski-Davis
 date: February 14, 2017
 ---
 
-Here are some notes on issues that came up for Kristy and Ryan as they did the Chapter 2 Supplemental Questions.
+Here are some notes on issues that came up for Kristy and Ryan as they did the **Chapter 2** Supplemental Questions.
 
 A useful logical expression, `!=` (not equal to) is mentioned once in Chapter 2.  It is a very useful expression to know, and Kristy used it in her answers several times, especially when avoiding elseif() statements.
 
@@ -23,7 +23,7 @@ The following functions are not mentioned in Chapter 2, but may be mentioned lat
      elseif() # this is not strictly needed, but useful to know in conjunction with if() statements
      else # also not strictly needed
 ```
-The following questions have wrong answers or or poorly worded:
+The following questions have wrong answers or are poorly worded:
 **Q5 - The line below is wrong in the answer.**
 
 ```r

@@ -143,7 +143,7 @@ ordinal2()
 # and FALSE otherwise.
 
 askState <- function() {
-  abr <- readline("Please enter a 2-letter state abbreviation to see if it existst: ")
+  abr <- readline("Please enter a 2-letter state abbreviation to see if it exists: ")
   ans <- abr %in% state.abb
   return(ans)
 }
@@ -154,7 +154,7 @@ askState()
 # return as TRUE.
 
 askState <- function() {
-  abr <- readline("Please enter a 2-letter state abbreviation to see if it existst: ")
+  abr <- readline("Please enter a 2-letter state abbreviation to see if it exists: ")
   ans <- toupper(abr) %in% state.abb
   return(ans)
 }
