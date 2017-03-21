@@ -16,8 +16,8 @@ table(round(iris$Sepal.Length*2)/2, iris$Species)
 
 hist(iris$Sepal.Length)
 
-# 29. Replicate the previous histogram, but manually specify the break points for
-# the histogram and add a custom title and axis labels.
+# 29. Replicate the previous histogram, but manually specify the break points 
+# for the histogram and add a custom title and axis labels.
 
 hist(iris$Sepal.Length, breaks = seq(4, 8, by = 0.25),
      xlab = "Sepal Length",
@@ -48,6 +48,7 @@ hist(iris$Sepal.Length[iris$Species == "virginica"],
      xlab = "Sepal Length",
      ylab = "Counts",
      main = "Distribution of Sepal Length for Virginica Species")
+
 # 31. Calculate the deciles of the petal length for the entire iris dataset.
 
 petals <- quantile(iris$Petal.Length, probs = seq(0, 1, 0.1))
@@ -205,9 +206,9 @@ askBirth()
 # Do this using a for loop rather than coding each plot by hand.
 
 par(mfrow = c(2,3))
-spray <- unique(InsectSprays$spray)
+sprays <- unique(InsectSprays$spray)
 for (i in 1:length(sprays)) {
-  hist(InsectSprays$count[InsectSprays$spray == spray[i]]/sum(InsectSprays$count[InsectSprays$spray == spray[i]]), 
+  hist(InsectSprays$count[InsectSprays$spray == sprays[i]]/sum(InsectSprays$count[InsectSprays$spray == sprays[i]]), 
        breaks = seq(0, 0.3, by = 0.025),
        ylim = c(0, 6))
 }
@@ -220,14 +221,14 @@ par(mfrow = c(2,3))
 par(mar = c(0,0,0,0))
 sprays <- unique(InsectSprays$spray)
 for (i in 1:length(sprays)) {
-  hist(InsectSprays$count[InsectSprays$spray == spray[i]]/sum(InsectSprays$count[InsectSprays$spray == spray[i]]), 
+  hist(InsectSprays$count[InsectSprays$spray == sprays[i]]/sum(InsectSprays$count[InsectSprays$spray == sprays[i]]), 
        breaks = seq(0, 0.3, by = 0.025),
        axes = FALSE,
        main = "",
        xlab = "",
        ylab = "",
        ylim = c(0, 6),
-       col = "grey")
+       col = "blue")
   box()
   text(x = .15, 
        y = 6,
@@ -238,7 +239,6 @@ for (i in 1:length(sprays)) {
 # 46. Calculate the median insect count for each spray.
 
 tapply(InsectSprays$count, InsectSprays$spray, median)
-
 
 # 47. Using the WorldPhones dataset, calculate the total number of phones used
 # in each year using a for loop.
@@ -253,6 +253,7 @@ totalphones
 # apply function.
 
 totalphones <- apply(WorldPhones, 1, sum)
+totalphones
 
 # 49. Calculate the percentage of phones that were in Europe over the years in
 # question.
