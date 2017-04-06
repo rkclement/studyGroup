@@ -1,6 +1,10 @@
 # Excerpt From: Taylor Arnold and Lauren Tilton, _Humanities Data in R_ 
 # Chapter 3 Supplemental Questions
 
+# Please answer as many of the following questions as you can, BUT FOCUS ON
+# questions 26 - 37. For a bonus challenge (!), try your hand at questions 
+# 44-46, in particular!
+
 # 26. The dataset iris is a very well-known statistical data from the 1930s. It
 # gives several measurements of iris sepal and petal lengths (in centimeters)
 # for three species. Construct a table of sepal length rounded to the nearest
