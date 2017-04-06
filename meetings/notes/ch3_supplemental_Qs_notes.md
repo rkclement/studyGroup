@@ -41,6 +41,7 @@ table(bins, bins2)
 ```
 This gives us a table that looks like this:
 
+```
    bins2
 bins  1  2  3  4  5  6  7  8  9 10
   1  18  0  6  0  0  0  0  0  0  0
@@ -53,6 +54,7 @@ bins  1  2  3  4  5  6  7  8  9 10
   8   0  0  0  0  0  0  2  5  5  0
   9   0  0  0  0  0  0  1  4  6  6
   10  0  0  0  0  0  0  0  0  4  9
+```
 
 Reading down the diagonol, we can see that if a species falls into, say, bin 2 for length, it is most likely to also fall into bin 2 for width. This tells us something about the relatedness of the length and width of the petals of these species. 
 
