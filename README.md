@@ -6,7 +6,7 @@ Welcome! This Study Group is based at Middlebury College, in Middlebury, VT. The
 
 This Middlebury Study Group is an informal meetup of friends and colleagues to share skills, stories, and ideas on using code for research and exploring open research practices. The goal is to create a friendly, no-pressure environment where people can share their work, ask for help on a coding problem, and learn and work together with their peers.
 
-Our first meetings started in February 2017. We started our study by working through the book [*Humanities Data in R*](http://humanitiesdata.org/) together, and are currently still working through this book. This book is available as an ebook [here](http://link.springer.com/book/10.1007%2F978-3-319-20702-5) if you are affiliated with Middlebury.
+Our first meetings started in February 2017. We started our study by working through the book [*Humanities Data in R*](http://humanitiesdata.org/) together, and are currently still working through this book. This book is available as an ebook [here](http://link.springer.com/book/10.1007%2F978-3-319-20702-5) if you are affiliated with Middlebury. All of our meeting agendas, helpful notes, and answer keys are available in our [meetings folder](https://github.com/rkclement/studyGroup/tree/gh-pages/meetings). 
 
 If you're interested in participating, please fill out our [brief survey](https://docs.google.com/a/middlebury.edu/forms/d/e/1FAIpQLSeYJ1PH1tRrVNviZbTFGkMvp7fA-ARL3mMgoqCM5fusPkVWlw/viewform) to let us know about your interest and your experience level.
 
