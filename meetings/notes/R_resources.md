@@ -13,6 +13,7 @@ Here is a collection of links to tutorials, blogs, and other documentation to he
 4. [R-bloggers](https://www.r-bloggers.com/): A great resource for seeing what folks have done with R, and for learning some new tricks and tips.
 5. [StackExchange List of Resources](http://stats.stackexchange.com/questions/138/free-resources-for-learning-r): An amazing list compiled by folks at StackExchance that covers just about every aspect of learning and keeping up with R that you'd want to know.
 6. [R Cheat Sheets](https://www.rstudio.com/resources/cheatsheets/): A series of 1 page cheat sheets with information about R functions.
+7. [Swirl](http://swirlstats.com/): An R package that provides in console tutorials for R.   
 
 ## Other Technologies
 1. [Programming Historian](http://programminghistorian.org/): An open access collection of tutorials and walkthroughs on a multitude of topics, including:
