@@ -13,6 +13,17 @@ plot(iris$Sepal.Length, iris$Petal.Length, pch = 19,
      col = ifelse(iris$Species == "setosa", "red", 
                   ifelse(iris$Species == "versicolor", "blue", "green")))
 
+# Alternative method 1
+
+species <- unique(iris$Species)
+colVals <- c("red", "blue", "green")
+colors <- colVals[match(iris$Species, species)]
+plot(iris$Sepal.Length, iris$Petal.Length, col = colors, pch = 19)
+
+# Final, most simple alternative method.
+
+plot(iris$Sepal.Length, iris$Petal.Length, col = iris$Species, pch = 19)
+
 # 53. Using the previous plot as a starting point, change the size of the points 
 # based on the sepal width. Hint: A good way to get nice sizes is to divide the 
 # sepal width by the median width.
@@ -22,6 +33,8 @@ plot(iris$Sepal.Length, iris$Petal.Length, pch = 19,
      col = ifelse(iris$Species == "setosa", "red", 
                   ifelse(iris$Species == "versicolor", "blue", "green")),
      cex = sizes)
+
+abline(h = 5, v = 6)
 
 # 54. Change the plot to use the text of the species type instead of dots. You 
 # can remove the sizing based on sepal width so that all of the text is of the 
@@ -42,8 +55,8 @@ text(iris$Sepal.Length, iris$Petal.Length, iris$Species,
 plot(iris$Sepal.Length,iris$Petal.Length, pch = 19,
      col = ifelse(iris$Species == "setosa", "red", 
                   ifelse(iris$Species == "versicolor", "blue", "green")))
-abline(v = median(iris$Sepal.Length))
-abline(h = median(iris$Petal.Length))
+abline(v = median(iris$Sepal.Length), h = median(iris$Petal.Length) )
+
 
 # 56. Add by group vertical and horizontal medians to the scatter plot of sepal
 # length versus petal length. There should be three vertical and three 
