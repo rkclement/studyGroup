@@ -124,6 +124,17 @@ points(iris$Petal.Length, iris$Petal.Width, pch = 19, col = "red")
 # the existing plot. So, in addition to having no legend, our plot is cut off at 
 # the bottom.
 
+# This isn't a problem with ggplot, where the graph is an "object" that can be 
+# changed and manipulated. Let's make our first ggplot graph.
+
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) + geom_point()
+
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) + geom_point() + 
+  geom_point(aes(x = Petal.Length, y = Petal.Width), col = "red")
+
+# As you can see, our graph size changes. Still no legend though! But that's 
+# because, even though the method above makes a graph, it's NOT THE RIGHT WAY TO
+# DO IT. First we need to talk about the Grammar of Graphics, and tidy data.
 
 #############################
 #### CLEANING IRIS DATA #####
