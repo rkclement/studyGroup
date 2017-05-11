@@ -34,8 +34,6 @@ plot(iris$Sepal.Length, iris$Petal.Length, pch = 19,
                   ifelse(iris$Species == "versicolor", "blue", "green")),
      cex = sizes)
 
-abline(h = 5, v = 6)
-
 # 54. Change the plot to use the text of the species type instead of dots. You 
 # can remove the sizing based on sepal width so that all of the text is of the 
 # same size; however, it may help to make all the text points smaller than the 
