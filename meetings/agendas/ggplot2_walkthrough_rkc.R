@@ -133,17 +133,49 @@ ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) + geom_point() +
   geom_point(aes(x = Petal.Length, y = Petal.Width), col = "red")
 
 # As you can see, our graph size changes. Still no legend though! But that's 
-# because, even though the method above makes a graph, it's NOT THE RIGHT WAY TO
-# DO IT. First we need to talk about the Grammar of Graphics, and tidy data.
+# because, even though the method above makes a graph, it's NOT THE RIGHT WAY
+# TO DO IT. First we need to talk about the Grammar of Graphics, and tidy data.
+
+# The Grammar of Graphics talks about 7 layers visualizations use: (1) Data, 
+# (2) Aesthetic Mappings, (3) Geometric Objects, (4) Scales, (5) Faceting, 
+# (6) Statistical Transformations, and (7) Coordinate Systems. For any ggplot 
+# visualization, you MUST specify the first 3 of these. If you don't specify
+# the others, ggplot will take care of them for you with defaults. 
+
+# Start with the data, and aesthetic mappings.
+
+g <- ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width, col = Species))
+
+# Add a geometric object
+
+g + geom_point()
+
+# Add facets, if you want
+
+g + geom_point() + facet_wrap(~Species)
+
+# Add a statistical transformation
+
+g + geom_point() + facet_wrap(~Species) + stat_smooth(method = lm)
+
+# And so on. So how do we make the graph from above of Sepal and Petal Length
+# vs Sepal and Petal Width properly?
+
+# If you look again at the head(iris), you'll see that the data has 4 columns 
+# which actually contain three values each. For example, Sepal Length stores
+# not only the value (the length), but also the fact that the measurement is
+# length, and the flower part is the sepal. Transforming the data into tidy
+# data, as below, can give us access to ALL of our data in order to make the
+# plots we're trying to make. 
 
 #############################
 #### CLEANING IRIS DATA #####
 #############################
 
-# Making iris_tidy by using tidyr functions gather() and separate(). Gathers all
-# non-categorial headers into one column, key, and then associates them with 
-# their previous values, which it puts into the Value column. You can just run 
-# this code.
+# Making iris_tidy by using tidyr functions gather() and separate(). Gathers
+# all non-categorial headers into one column, key, and then associates them 
+# with their previous values, which it puts into the Value column. You can just
+# run this code.
 
 iris_tidy <- iris %>%
   gather(key, Value, - Species) %>%
@@ -159,3 +191,15 @@ iris_wide <- iris %>%
   gather(key, value, -Species, -Flower) %>%
   separate(key, c("Part", "Measure"), "\\.") %>%
   spread(Measure, value)
+
+head(iris_tidy)
+head(iris_wide)
+
+ggplot(iris_wide, aes(x = Length, y = Width, col = Part)) + geom_point()
+
+
+ggplot(iris_wide, aes(x = Length, y = Width, col = Part)) + geom_point() + facet_wrap(~Species, nrow = 2)
+
+ggplot(iris_tidy, aes(x = Part, y = Value, col = Measure)) + geom_point() + facet_grid(~Species)
+
+ggplot(iris_tidy, aes(x = Part, y = Value, col = Measure)) + geom_boxplot() + facet_grid(~Species)
