@@ -1,3 +1,5 @@
 client_secret.json
 _site/
-.Rproj.user
+.Rproj.user/
+.RData
+.Rhistory
