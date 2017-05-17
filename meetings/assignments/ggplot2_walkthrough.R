@@ -111,11 +111,12 @@ text(median(iris$Sepal.Length) + 0.35, 2.5,
 # not static plots, so we can manipulate them rather than just building them up 
 # by drawing over the already made plots.
 
-# For example, in base plot, if we go back to our basic scatterplot:
+# For example, in base plot, if we go back to a basic scatterplot of width vs
+# length of sepals:
 
 plot(iris$Sepal.Length, iris$Sepal.Width)
 
-# and then decide we want to add the width data as well, we can do that like 
+# and then decide we want to add the petal data as well, we can do that like 
 # this:
 
 plot(iris$Sepal.Length, iris$Sepal.Width, pch = 19)
@@ -149,15 +150,19 @@ g <- ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width, col = Species))
 
 # Add a geometric object
 
-g + geom_point()
+g2 <- g + geom_point()
 
 # Add facets, if you want
 
-g + geom_point() + facet_wrap(~Species)
+g2 + facet_wrap(~Species)
 
 # Add a statistical transformation
 
-g + geom_point() + facet_wrap(~Species) + stat_smooth(method = lm)
+g + geom_point() + stat_smooth()
+
+g + geom_point() + stat_smooth(method = "lm")
+
+g + geom_point() + stat_quantile()
 
 # And so on. So how do we make the graph from above of Sepal and Petal Length
 # vs Sepal and Petal Width properly?
@@ -209,16 +214,27 @@ head(iris_wide)
 
 # Plot length vs width, colored by part (sepal or petal) using iris_wide.
 
+ggplot(iris_wide, aes(x = Length, y = Width, col = Part)) + geom_point()
 
-# Plot length vs width, colored by part (sepal or petal) using iris_wide, but 
-# this time make a separate graph for each species
+ggplot(iris_wide, aes(x = Length, y = Width, col = Part, shape = Species)) + 
+  geom_point()
 
+# It doesn't make much sense to use shapes to differentiate species, as this is 
+# hard to visually interpret.Plot length vs width, colored by part (sepal or 
+# petal) using iris_wide, but this time make a separate graph for each species
+
+ggplot(iris_wide, aes(x = Length, y = Width, col = Part)) + geom_point() +
+  facet_wrap(~Species, nrow = 2)
 
 # Use iris_tidy to make a point graph of the measurements of each different part 
 # colored by whether they are length or width, and faceted by species. Then make
 # the same graph as boxplots.
 
+ggplot(iris_tidy, aes(x = Part, y = Value, col = Measure)) + geom_point() + 
+  facet_grid(~Species)
 
+ggplot(iris_tidy, aes(x = Part, y = Value, col = Measure)) + geom_boxplot() + 
+  facet_grid(~Species)
 
 #####################################
 # More ggplot functionality and fun #
@@ -231,6 +247,9 @@ head(diamonds)
 # "count") of occurences as a below, can be substituted with the same stat 
 # transformation.
 
+ggplot(diamonds, aes(cut)) + geom_bar()
+
+ggplot(diamonds, aes(cut)) + stat_count()
 
 # You can also use "identity" as a stat transformation if the "count" is present
 # in your data itself.
@@ -238,15 +257,57 @@ head(diamonds)
 cut_freq <- count(diamonds, cut)
 cut_freq
 
+ggplot(cut_freq, aes(cut, n)) + geom_bar(stat = "identity")
 
 # Different positions for bars in charts
 
+ggplot(diamonds, aes(cut, fill = clarity)) + geom_bar()
+
+ggplot(diamonds, aes(cut, fill = clarity)) + geom_bar(position = "dodge")
+
+ggplot(diamonds, aes(cut, fill = clarity)) + geom_bar(position = "identity")
+
+ggplot(diamonds, aes(cut, fill = clarity)) + 
+  geom_bar(position = "identity", alpha = 0.2)
+
+ggplot(diamonds, aes(cut, fill = clarity)) + geom_bar(position = "fill")
 
 # Different coordinate systems
 
+ggplot(diamonds, aes(cut, fill = cut)) + geom_bar() + coord_polar()
+
+ggplot(diamonds, aes(cut, fill = cut)) + geom_bar() + coord_flip()
+
+ggplot(diamonds, aes(cut, fill = clarity)) + geom_bar(position = "dodge") + 
+  coord_polar()
 
 # Plotting lines fitted to the data
 
+ggplot(diamonds, aes(carat, price)) + geom_point()
+
+ggplot(diamonds, aes(carat, price)) + geom_point(alpha = 0.2) + geom_smooth()
+
+
+ggplot(diamonds, aes(carat, price)) + geom_point(alpha = 0.2) + 
+  geom_smooth(method = "lm")
+
+ggplot(diamonds, aes(carat, price)) + geom_point(alpha = 0.2) + 
+  geom_smooth(aes(color = clarity))
+
+ggplot(diamonds, aes(carat, price)) + 
+  geom_point(aes(color = clarity),alpha = 0.2) + 
+  geom_smooth(aes(color = clarity))
+
+ggplot(diamonds, aes(carat, price)) + geom_smooth(aes(color = clarity))
+
+
+ggplot(diamonds, aes(carat, price)) + geom_point(alpha = 0.2) + 
+  geom_smooth(aes(color = clarity), se = FALSE)
+
+# Matrix faceting
+
+ggplot(diamonds, aes(carat, price)) + geom_point(alpha = 0.2) + 
+  facet_grid(cut ~ clarity)
 
 ################################################################################
 # To learn more about using ggplot2 and the rest of the tidyverse packages,    #
