@@ -309,7 +309,6 @@ ggplot(diamonds, aes(carat, price)) + geom_point(alpha = 0.2) +
 ggplot(diamonds, aes(carat, price)) + geom_point(alpha = 0.2) + 
   facet_grid(cut ~ clarity)
 
-
 ################################################################################
 # To learn more about using ggplot2 and the rest of the tidyverse packages,    #
 # see Hadley Wickham & Garrett Grolemund's book (available online) _R for Data #
