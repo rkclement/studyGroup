@@ -14,6 +14,7 @@ library(rgdal)
 library(rgeos)
 library(ggplot2)
 
+# change to your own working directory
 setwd("~/Google Drive/MiddleburyDataStudyGroup/humanitiesDataInR/data/ch07")
 
 berlin <- read.csv("berlinBorderCrossing.csv", as.is = TRUE)
@@ -84,7 +85,8 @@ osmap(tiles.url = "http://tile.stamen.com/toner/")
 points(x = berlin$Longitude,
        y = berlin$Latitude,
        pch = 19,
-       col = "red")
+       col = "brown",
+       cex = 2.0)
 
 # reading in a shapefile using sp and maptools packages
 # NOTE: code in book doesn't work!
@@ -111,7 +113,7 @@ plot(stateTrans)
 
 # finding centroids of new transformed projection. NOTE: book doesn't have you
 # install rgeos library, which is necessary for the gCentroid() function
-centroid <- gCentroid(spgeom=stateTrans, byid=TRUE)
+centroid <- gCentroid(spgeom = stateTrans, byid=TRUE)
 head(centroid)
 
 # adding labels to the states, positioned at the centroids
@@ -158,7 +160,7 @@ cnty <- readOGR("data/ch07/County_2010Census_DP1")
 proj4string(photos_pts) <- CRS(projargs = "+proj=longlat +datum=NAD83 +no_defs +ellps=GRS80 +towgs84=0,0,0")
 
 # combine cty and photos_pts
-joinedDataF <- over(x = photos_pts,y = cnty)
+joinedDataF <- over(x = photos_pts, y = cnty)
 
 # construct a boxplot of population density for photographer locations
 joinedDataF$popDen <- joinedDataF$DP0010001 / joinedDataF$ALAND10
