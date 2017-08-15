@@ -16,6 +16,11 @@ Here is a collection of links to tutorials, blogs, and other documentation to he
 7. [Swirl](http://swirlstats.com/): An R package that provides in console tutorials for R.  
 8. [GGPlot2](http://ggplot2.tidyverse.org/): A very useful graphing program provided through Tidyverse.  We will use this in our May 15th meeting.
 
+## R Books Online
+1. [*R for Data Science*](http://r4ds.had.co.nz/) - Garrett Grolemund & Hadley Wickham. Covers visualization with ggplot2, manipulation with dplyr and tidyr, workflows, and more.
+2. [*Text Mining with R: A Tidy Approach*] - Julia Silge & David Robinson. Covers text mining in R using the principles of tidy data.
+3. [*ModernDive: An Introduction to Statistical and Data Sciences via R*] - Chester Ismay & Albert Y. Kim. Covers visualization, manipulation, workflows, and statistical and data science.
+
 ## Other Technologies
 1. [Programming Historian](http://programminghistorian.org/): An open access collection of tutorials and walkthroughs on a multitude of topics, including:
   - Writing with markdown
